@@ -1,3 +1,4 @@
+//Time and Date
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -25,4 +26,14 @@ function startTime() {
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
+}
+
+/*Show About onClick*/
+function aboutPage() {
+  var x = document.getElementById("passport");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
