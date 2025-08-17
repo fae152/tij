@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'fot-seurat_prob';
+    src: url('font/fot-seurat_pro_b-webfont.woff2') format('woff2'),
+         url('font/fot-seurat_pro_b-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  font-family:'SeuratPro-B', 'FOT-Seurat Pro', serif;
+  font-weight:700;
+  font-stretch:extra-expanded;
+  margin: auto;
+  font-size: 40px;
+}
+
+body {
+  background-image: url(/images/bg.svg);
+  background-color: #097044;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+}
+
+.pocket {
+  fill:#FFF5E8;
+  filter: drop-shadow(30px 50px #3DB7AC)
+}
+
+#copyright {
+  fill:#DFA640;
+  stroke:#FFF5E8;
+  stroke-width:10px;
+}
+
+.copyrightLine {
+  stroke:#FFF5E8;
+  stroke-width: 7px;
+}
+
+#time,
+#date,
+.toolTipText {
+  fill: #FFF5E8;
+}
+
+.iconGroup {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.circleEmpty {
+  fill:#E7DDD0;
+  cursor: pointer;
+}
+
+.circleEmpty:hover,
+.iconGroup:hover {
+  fill: #3DB7AC;
+}
+
+#time {
+  font-size: 50px;
+  text-anchor: middle;
+}
+
+#date {
+  font-size: 70px;
+  text-anchor: middle;
+}
