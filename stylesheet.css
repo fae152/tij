@@ -15,7 +15,7 @@
 }
 
 body {
-  background-image: url(/images/bg.svg);
+  background-image: url(images/bg.svg);
   background-color: #097044;
   background-size: cover;
   overflow: hidden;
