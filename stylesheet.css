@@ -1,17 +1,28 @@
-@font-face {
-    font-family: 'fot-seurat_prob';
-    src: url('font/fot-seurat_pro_b-webfont.woff2') format('woff2'),
-         url('font/fot-seurat_pro_b-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
 
 * {
-  font-family:'SeuratPro-B', 'FOT-Seurat Pro', serif;
-  font-weight:700;
-  font-stretch:extra-expanded;
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin: auto;
-  font-size: 40px;
+}
+
+.dongle-light {
+  font-family: "Dongle", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dongle-bold {
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
@@ -27,6 +38,89 @@ body {
   filter: drop-shadow(30px 50px #3DB7AC)
 }
 
+#time,
+#date,
+#time2,
+#date2,
+.circle,
+#toolTipText,
+.backButtonArrow {
+  fill: #FFF5E8;
+}
+
+#toolTipText {
+  font-size: 70px;
+}
+
+#icons {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.circleEmpty,
+#backButton  {
+  fill:#E7DDD0;
+  cursor: pointer;
+}
+
+.toolTip,
+.circleEmpty:hover,
+.iconGroup:hover,
+.circle:hover {
+  fill: #3DB7AC;
+}
+
+#time,
+#time2 {
+  font-size: 120px;
+  text-anchor: middle;
+}
+
+#date,
+#date2 {
+  font-size: 115px;
+  text-anchor: middle;
+}
+
+.backButtonText {
+  font-weight:700;
+  font-size:70px;
+  fill:#766E53;
+  text-anchor: start;
+  cursor: pointer;
+}
+
+#passportBG {
+  width: 100%;
+  height:100%;
+  fill:#C0BBA8;
+  fill-opacity:0.5;
+}
+
+/*About*/
+#pocketExpanded,
+#About {
+  display: none;
+}
+
+.residentRep,
+.passportText,
+.passportHeader {
+  fill:#74664B;
+}
+
+.residentRep {
+  font-size: 80px;
+}
+
+.residentRepOutline, 
+.passportLine {
+  fill:none;
+  stroke:#74664B;
+  stroke-width: 1.38px;
+  stroke-miterlimit:1.76829;
+}
+
 #copyright {
   fill:#DFA640;
   stroke:#FFF5E8;
@@ -38,50 +132,15 @@ body {
   stroke-width: 7px;
 }
 
-#time,
-#date,
-.toolTipText {
-  fill: #FFF5E8;
+.passportHeader {
+  font-size: 100px;
 }
 
-.iconGroup {
-  fill: transparent;
-  cursor: pointer;
+.passportText {
+  font-size:54px;
 }
 
-.circleEmpty,
-#backButton {
-  fill:#E7DDD0;
-  cursor: pointer;
-}
-
-.circleEmpty:hover,
-.iconGroup:hover {
-  fill: #3DB7AC;
-}
-
-#time {
-  font-size: 50px;
-  text-anchor: middle;
-}
-
-#date {
-  font-size: 70px;
-  text-anchor: middle;
-}
-
-#passport {
-  display: none;
-}
-
-#passportBG {
-  width: 100%;
-  height:100%;
-  fill:#C0BBA8;
-  fill-opacity:0.5;
-}
-
-.backButtonText {
-  font-size:35.267px;
-  fill: #756E52;
+.passportDate {
+  fill: #B5AD95;
+  font-size:54px;
 }
