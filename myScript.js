@@ -20,6 +20,8 @@ function startTime() {
   m = checkTime(m);
   document.getElementById('time').innerHTML =  h + ":" + m + " " + amPm;
   document.getElementById('date').innerHTML = dayName + " • " + date + " " + monthName;
+  document.getElementById('time2').innerHTML =  h + ":" + m + " " + amPm;
+  document.getElementById('date2').innerHTML = dayName + " • " + date + " " + monthName;
   setTimeout(startTime, 1000);
 }
 
@@ -30,10 +32,19 @@ function checkTime(i) {
 
 /*Show About onClick*/
 function aboutPage() {
-  var x = document.getElementById("passport");
-  if (x.style.display === "none") {
+  var x = document.getElementById("About");
+  var y = document.getElementById("pocketExpanded");
+  var z = document.getElementById("copyright1");
+  var a = document.getElementById("pocketBG1");
+  if (x.style.display === "none" & y.style.display === "none" & z.style.display === "block" & a.style.display === "block") {
     x.style.display = "block";
+    y.style.display = "block";
+    z.style.display = "none";
+    a.style.display = "none";
   } else {
     x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+    a.style.display = "block";
   }
 }
