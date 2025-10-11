@@ -1,0 +1,5 @@
+media: 
+   - name: images
+     label: Images
+     input: images
+     output: /images
