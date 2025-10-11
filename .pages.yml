@@ -3,3 +3,121 @@ media:
      label: Images
      input: images
      output: /images
+components:
+  published:
+    label: Published?
+    type: boolean
+    default: true
+  coverImage:
+    label: Cover Image
+    type: object
+    fields:
+      - name: src
+        label: Image
+        type: image
+      - name: alt
+        label: ALT Text
+        type: string
+  postThumbnail:
+    label: Thumbnail w/ALT Text
+    type: object
+    fields:
+      - name: src
+        label: Thumbnail
+        type: image
+      - name: alt
+        label: ALT Text
+        type: string
+content:
+  - name: blog
+    label: Blog
+    type: collection
+    path: 'blog'
+    filename: "{fields.date}.md"
+    view:
+      fields: [ postTitle, published, date ]
+      primary: date
+    fields:
+      - name: postThumbnail
+        component: postThumbnail
+      - name: cover
+        component: coverImage
+      - name: date
+        label: Date
+        type: date
+      - name: postTitle
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+      - name: footnote
+        label: Notes
+        type: rich-text
+      - name: tags
+        label: Tags
+        type: string
+        list:
+          collapsible: false
+  - name: progress
+    label: Progress Posts
+    type: collection
+    path: 'progress'
+    filename: "{fields.date}.md"
+    view:
+      fields: [ postTitle, published, date ]
+      primary: date
+    fields:
+      - name: image
+        label: Image
+        type: image
+  - name: resources
+    label: Resources
+    type: collection
+    path: 'resources'
+    filename: "{primary}.md"
+    view:
+      fields: [ category, business ]
+      primary: category
+    fields:
+      - name: updated
+        label: Last Updated
+        type: date
+      - name: category
+        label: Category
+        type: select
+        options:
+          multiple: true
+          values: [HRT, Electrolysis, Surgery, Organizations/Groups, Other ]
+      - name: business
+        label: Business
+        type: string
+      - name: url
+        label: URL
+        type: string
+      - name: info
+        label: Text
+        type: rich-text
+  - name: contact
+    label: Contact
+    type: file
+    path: 'contact.md'
+    fields:
+      - name: contactForm
+        label: Contact information
+        type: object
+        fields:
+          - name: first_name
+            label: First name
+            type: string
+          - name: last_name
+            label: Last name
+            type: string
+          - name: email
+            label: Email address
+            type: string
+  - name: readme
+    label: Read Me
+    path: 'README.md'
+    type: file
+    format: code
