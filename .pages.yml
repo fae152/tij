@@ -38,10 +38,6 @@ content:
       fields: [ postTitle, published, date ]
       primary: date
     fields:
-      - name: postThumbnail
-        component: postThumbnail
-      - name: cover
-        component: coverImage
       - name: date
         label: Date
         type: date
@@ -54,11 +50,6 @@ content:
       - name: footnote
         label: Notes
         type: rich-text
-      - name: tags
-        label: Tags
-        type: string
-        list:
-          collapsible: false
   - name: progress
     label: Progress Posts
     type: collection
